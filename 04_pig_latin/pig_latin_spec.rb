@@ -69,4 +69,13 @@ describe "#translate" do
   # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
   # * retain the punctuation from the original phrase
 
+  it "leaves capitalized words capitalized" do
+    s = translate("Potato tomatopotato")
+    expect(s).to eq("Otatopay omatopotatotay")
+  end
+  
+  it "retains punctuation" do
+    s = translate("The kingdom. It is amazing, right?")
+    expect(s).to eq("Ethay ingdomkay. Itay isay amazingay, ightray?")
+  end
 end
